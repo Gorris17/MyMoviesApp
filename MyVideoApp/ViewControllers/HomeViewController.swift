@@ -8,11 +8,27 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    // MARK: - Properties
+    let viewModel = HomeViewModel()
+    
+    // MARK: - Outlets
+    
+    
+    // MARK: - Actions
+    
+    
+    // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        print("HELLO WORLD")
+        viewModel.loadMovies {
+            print("Movies display")
+        }
     }
     
 
