@@ -27,9 +27,10 @@ class DetailMovieViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.recommendedMoviesCollectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCollectionCell")
         self.recommendedMoviesCollectionView.delegate = self
         self.recommendedMoviesCollectionView.dataSource = self
-        
+        self.favoritesMovieCollectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCollectionCell")
         self.favoritesMovieCollectionView.delegate = self
         self.favoritesMovieCollectionView.dataSource = self
         
@@ -78,7 +79,17 @@ extension DetailMovieViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCollectionCell", for: indexPath) as? MovieCollectionViewCell {
+            
+            if let movie = viewModel?.recommendedMoviesList[indexPath.row], let movieImage = viewModel?.loadMovieImage(movie: movie, imageType: .vertical) {
+                cell.configureCell(movie: movie, image: movieImage)
+                return cell
+            }
+            return UICollectionViewCell()
+            
+        } else {
+            return UICollectionViewCell()
+        }
     }
     
     
