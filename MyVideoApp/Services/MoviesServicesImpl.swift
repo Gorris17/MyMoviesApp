@@ -24,12 +24,10 @@ public class MoviesServicesImpl {
     
     private let getMoviesUrl: String = "https://smarttv.orangetv.orange.es/stv/api/rtv/v1/GetUnifiedList?client=json&statuses=published&definitions=SD;HD;4K&external_category_id=SED_3880&filter_empty_categories=true"
     
-    
     private let getMoviesDetailUrl: String = "https://smarttv.orangetv.orange.es/stv/api/rtv/v1/GetVideo"
     
     private let getMoviesRecomendationsListUrl: String = "https://smarttv.orangetv.orange.es/stv/api/reco/v1/GetVideoRecommendationList"
     
-    //https://smarttv.orangetv.orange.es/stv/api/reco/v1/GetVideoRecommendationList?client=json&type=all&subscription=false&filter_viewed_content=true&max_results=10&blend=ar_od_blend_2424video&params=external_content_id:MFO_0000014003&max_pr_level=8&quality=SD,HD&services=2424VIDEO
     public let imageMoviesBaseUrl: String = "https://smarttv.orangetv.orange.es/stv/api/rtv/v1/images"
     
     // MARK: - Methods
