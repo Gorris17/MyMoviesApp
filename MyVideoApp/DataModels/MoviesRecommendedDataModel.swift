@@ -15,5 +15,5 @@ public struct MoviesRecommendedDataModel: Codable {
     
     public let externalContentId: String?
     
-//    public let images: [AttachmentDataModel]?
+    public let images: [AttachmentDataModel]?
 }
