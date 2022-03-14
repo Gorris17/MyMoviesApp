@@ -21,4 +21,7 @@ public struct MovieDataModel: Codable {
     
     public let keywords: String?
     
+    public let attachments: [AttachmentDataModel]?
+    
 }
+
