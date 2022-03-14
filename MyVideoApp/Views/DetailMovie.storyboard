@@ -28,16 +28,19 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-It-Qeh">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="218" id="hkQ-5D-ARe"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s4b-yh-OBm">
                                                         <rect key="frame" x="20" y="200" width="374" height="318"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M96-3f-Reg">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M96-3f-Reg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="b2Q-ir-Wqs"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -168,7 +171,6 @@
                                                     <constraint firstItem="s4b-yh-OBm" firstAttribute="top" secondItem="pFj-Vc-bWL" secondAttribute="top" constant="200" id="agh-Qo-qtH"/>
                                                     <constraint firstAttribute="trailing" secondItem="2gh-It-Qeh" secondAttribute="trailing" id="h9v-oQ-Pue"/>
                                                     <constraint firstItem="2gh-It-Qeh" firstAttribute="top" secondItem="pFj-Vc-bWL" secondAttribute="top" id="my2-Mp-afQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2gh-It-Qeh" secondAttribute="bottom" constant="600" id="s4Q-aI-hwD"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

@@ -88,6 +88,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        viewModel.searchMovie(searchText: searchText, completion: {
+            self.moviesTableView.reloadData()
+        })
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.moviesSearchBar.endEditing(true)
     }
 }

@@ -13,11 +13,11 @@ public class MovieModel: Decodable {
         
     public let externalId: String?
     
-    public let name: String?
+    public var name: String?
     
-    public let shortName: String?
+    public var shortName: String?
     
-    public let description: String?
+    public var description: String?
     
     public var keywords: [String]?
     
@@ -41,6 +41,16 @@ public class MovieModel: Decodable {
             })
         }
         if let attachments = moviesData.attachments {
+            attachments.forEach({ data in
+                self.attachments.append(AttachmentModel(attachment: data))
+            })
+        }
+    }
+    
+    public init(moviesRecommendedData: MoviesRecommendedDataModel) {
+        self.name = moviesRecommendedData.name
+        self.externalId = moviesRecommendedData.externalContentId
+        if let attachments = moviesRecommendedData.images {
             attachments.forEach({ data in
                 self.attachments.append(AttachmentModel(attachment: data))
             })

@@ -73,5 +73,36 @@ class HomeViewModel: NSObject, ObservableObject {
                 print("Error: \(message)")
             }
         }
+        completion()
+    }
+    
+    func searchMovie(searchText: String, completion: @escaping () -> Void) {
+        self.moviesList = []
+        completeMovieList.forEach({ movie in
+            if movie.name?.lowercased().contains(searchText.lowercased()) ?? false || movie.keywords?.contains(where: { $0.lowercased().contains(searchText.lowercased())}) ?? false {
+                moviesList.append(movie)
+            }
+        })
+        if self.moviesList.isEmpty {
+            self.moviesList = self.completeMovieList
+        }
+        completion()
+    }
+    
+    func getRecommendedMovies(movieId: String, completion: @escaping () -> Void) {
+        recommendedMoviesList = []
+        service.getRecommendedMovies(movieId: movieId)
+        service.moviesRecommendationCompletionHandler { [weak self] (movies, status, message) in
+            if status {
+                guard let self = self else { return }
+                guard let moviesList = movies else { return }
+                moviesList.forEach({ dataMovie in
+                    self.recommendedMoviesList.append(MovieModel(moviesRecommendedData: dataMovie))
+                })
+            } else {
+                print("Error: \(message)")
+            }
+            completion()
+        }
     }
 }

@@ -35,6 +35,7 @@ class DetailMovieViewController: UIViewController {
         
         self.setupLabels()
         self.setupBackgroundImage()
+        self.getRecommendedMovies()
     }
 
     private func setupLabels() {
@@ -46,8 +47,20 @@ class DetailMovieViewController: UIViewController {
     }
     
     private func setupBackgroundImage() {
-        backgroundImageView.image = self.viewModel?.loadMovieImage(movie: movie, imageType: .background) ?? UIImage()
-        
+        DispatchQueue.main.async {
+            if let image = self.viewModel?.loadMovieImage(movie: self.movie, imageType: .background) {
+                self.backgroundImageView.image = image
+            }
+        }
+    }
+    
+    private func getRecommendedMovies() {
+        guard let id = movie?.externalId else {
+            return
+        }
+        viewModel?.getRecommendedMovies(movieId: id, completion: {
+            self.recommendedMoviesCollectionView.reloadData()
+        })
     }
 
 }

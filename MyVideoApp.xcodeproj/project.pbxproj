@@ -31,6 +31,8 @@
 		F4C0D02327DF8AFA004E7FAE /* AttachmentDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0D02227DF8AFA004E7FAE /* AttachmentDataModel.swift */; };
 		F4C0D02627DF8CB1004E7FAE /* MovieImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0D02527DF8CB1004E7FAE /* MovieImageType.swift */; };
 		F4C0D02827DF8E04004E7FAE /* AttachmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0D02727DF8E04004E7FAE /* AttachmentModel.swift */; };
+		F4C0D02A27DFB4FA004E7FAE /* MoviesRecommendedResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0D02927DFB4FA004E7FAE /* MoviesRecommendedResponseDataModel.swift */; };
+		F4C0D02C27DFB557004E7FAE /* MoviesRecommendedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0D02B27DFB557004E7FAE /* MoviesRecommendedDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		F4C0D02227DF8AFA004E7FAE /* AttachmentDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentDataModel.swift; sourceTree = "<group>"; };
 		F4C0D02527DF8CB1004E7FAE /* MovieImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageType.swift; sourceTree = "<group>"; };
 		F4C0D02727DF8E04004E7FAE /* AttachmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentModel.swift; sourceTree = "<group>"; };
+		F4C0D02927DFB4FA004E7FAE /* MoviesRecommendedResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRecommendedResponseDataModel.swift; sourceTree = "<group>"; };
+		F4C0D02B27DFB557004E7FAE /* MoviesRecommendedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRecommendedDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 				F4C0D01027DBA415004E7FAE /* MovieResponseDataModel.swift */,
 				F4C0D02027DF5B15004E7FAE /* MovieDetailResponseDataModel.swift */,
 				F4C0D02227DF8AFA004E7FAE /* AttachmentDataModel.swift */,
+				F4C0D02927DFB4FA004E7FAE /* MoviesRecommendedResponseDataModel.swift */,
+				F4C0D02B27DFB557004E7FAE /* MoviesRecommendedDataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -338,10 +344,12 @@
 				F4B2F96A27DB5F5700C58B2E /* DetailMovieViewController.swift in Sources */,
 				F4C0D02627DF8CB1004E7FAE /* MovieImageType.swift in Sources */,
 				F4C0D02827DF8E04004E7FAE /* AttachmentModel.swift in Sources */,
+				F4C0D02A27DFB4FA004E7FAE /* MoviesRecommendedResponseDataModel.swift in Sources */,
 				F4C0D01B27DF2BFC004E7FAE /* MovieCollectionViewCell.swift in Sources */,
 				F4B2F97027DB5F5700C58B2E /* MyVideoApp.xcdatamodeld in Sources */,
 				F4C0D02327DF8AFA004E7FAE /* AttachmentDataModel.swift in Sources */,
 				F4B2F98B27DB830300C58B2E /* MovieDataModel.swift in Sources */,
+				F4C0D02C27DFB557004E7FAE /* MoviesRecommendedDataModel.swift in Sources */,
 				F4C0D01F27DF2EC4004E7FAE /* MovieModel.swift in Sources */,
 				F4B2F98827DB6C4700C58B2E /* UIApplicationDelegate+Loading.swift in Sources */,
 				F4B2F96627DB5F5700C58B2E /* AppDelegate.swift in Sources */,
